@@ -9,11 +9,9 @@ namespace WebApp_LB3.Models
         public ResultViewModel(DataViewModel dataViewModel)
         {
             this.dataViewModel = dataViewModel;
-            SolverRun();
         }
 
-
-        public void SolverRun()
+        public bool SolverRun()
         {
             Solver solver = Solver.CreateSolver("GLOP");
 
@@ -71,6 +69,19 @@ namespace WebApp_LB3.Models
             X4 = Math.Round(x4.SolutionValue(), 0);
             X5 = Math.Round(x5.SolutionValue(), 0);
             X6 = Math.Round(x6.SolutionValue(), 0);
+
+            if (resultStatus == Solver.ResultStatus.OPTIMAL)
+            {
+                dataViewModel.IsRes = true;
+                return true;
+            }
+
+            else
+            {
+                dataViewModel.IsRes = false;
+                return false;
+            }
+
         }
 
 

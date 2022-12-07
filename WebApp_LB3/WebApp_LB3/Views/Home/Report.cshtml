@@ -1,0 +1,305 @@
+﻿@{
+    Layout = null;
+}
+@model ResultViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp_LB3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApp_LB3.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <div>
+                <h1 class="display-4">Решение задачи минимизации отходов от раскроя рулонных заготовок</h1>
+            </div>
+
+            <h2 class="mt-5">Исходные данные</h2>
+
+            <table class="table table-bordered">
+
+                <tr>
+                    <th scope="col" rowspan="2">Вид заготовки</th>
+                    <th scope="col" rowspan="2">Площадь поверхности заготовки, см2</th>
+                    <th scope="col" colspan="6">Количество заготовок на 1 изделие по соответствующему способу раскроя, шт.</th>
+                    <th scope="col" rowspan="2">Количество заготовок на 1 изделие, шт.</th>
+                </tr>
+
+
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <th>A1</th>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_PloPovZag">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_1">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_2">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_3">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_4">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_5">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoZag_6">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A1_ColvoNaOd">
+                    </td>
+                </tr>
+                <tr>
+                    <th>A2</th>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_PloPovZag">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_1">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_2">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_3">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_4">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_5">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoZag_6">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A2_ColvoNaOd">
+                    </td>
+                </tr>
+                <tr>
+                    <th>A3</th>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_PloPovZag">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_1">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_2">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_3">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_4">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_5">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoZag_6">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A3_ColvoNaOd">
+                    </td>
+                </tr>
+                <tr>
+                    <th>A4</th>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_PloPovZag">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_1">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_2">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_3">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_4">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_5">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoZag_6">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A4_ColvoNaOd">
+                    </td>
+                </tr>
+                <tr>
+                    <th>A5</th>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_PloPovZag">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_1">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_2">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_3">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_4">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_5">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoZag_6">
+                    </td>
+                    <td>
+                        <input type="text" readonly class="table-input-text" asp-for="dataViewModel.A5_ColvoNaOd">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9">
+                        <table class="table table-bordered mb-0">
+                            <th>Заданная длина полос проката, см:</th>
+                            <td>
+                                <input type="text" readonly class="table-input-text" asp-for="dataViewModel.Zag_F">
+                            </td>
+                            <th>Необходимое количество изделий, шт:</th>
+                            <td>
+                                <input type="text" readonly class="table-input-text" asp-for="dataViewModel.Zag_R">
+                            </td>
+                        </table>
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <h2 class="mt-5">Результаты расчёта</h2>
+
+            <table class="table table-bordered">
+
+                <tr>
+                    <th scope="col" colspan="6">
+                        Количество полос проката, которое нужно разрезать соответствующим способом для изготовления заданного количества изделий, шт
+                    </th>
+                </tr>
+
+                <tr>
+                    <th scope="col">X1</th>
+                    <th scope="col">X2</th>
+                    <th scope="col">X3</th>
+                    <th scope="col">X4</th>
+                    <th scope="col">X5</th>
+                    <th scope="col">X6</th>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <input type="text" class="table-input-text" value="@Model.X1" readonly>
+                    </td>
+                    <td>
+                        <input type="text" class="table-input-text" asp-for="X2" readonly>
+                    </td>
+                    <td>
+                        <input type="text" class="table-input-text" asp-for="X3" readonly>
+                    </td>
+                    <td>
+                        <input type="text" class="table-input-text" asp-for="X4" readonly>
+                    </td>
+                    <td>
+                        <input type="text" class="table-input-text" asp-for="X5" readonly>
+                    </td>
+                    <td>
+                        <input type="text" class="table-input-text" asp-for="X6" readonly>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="6">
+                        <table class="table table-bordered mb-0">
+                            <th>Величина суммарных отходов от резки металла (целевая функция), см2:</th>
+                            <td>
+                                <input type="text" class="table-input-text" asp-for="Cel" readonly>
+                            </td>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+
+            <button class="btn btn-success" id="back" onclick="report()">Сохранить </button>
+
+
+            <div class="row mt-5 ">
+                <div class="col-4 my-4">
+                    <div class="bottom-0">Дата формирования документа</div>
+                </div>
+                <div class="col-4 "></div>
+                <div class="col-4 my-4">
+                    <div id="current_date_time_block" class="bottom-0"></div>
+                    <script type="text/javascript">
+
+                        function zero_first_format(value) {
+                            if (value < 10) {
+                                value = '0' + value;
+                            }
+                            return value;
+                        }
+
+                        function date_time() {
+                            var current_datetime = new Date();
+                            var day = zero_first_format(current_datetime.getDate());
+                            var month = zero_first_format(current_datetime.getMonth() + 1);
+                            var year = current_datetime.getFullYear();
+                            var hours = zero_first_format(current_datetime.getHours());
+                            var minutes = zero_first_format(current_datetime.getMinutes());
+                            var seconds = zero_first_format(current_datetime.getSeconds());
+
+                            return day + "." + month + "." + year ;
+                        }
+                        document.getElementById('current_date_time_block').innerHTML = date_time();
+                    </script>
+                </div>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        function report() {
+            document.getElementById("back").style.display = "none";
+            window.print();
+            setTimeout(() => { document.getElementById("back").style.display = "block" }, 2000);
+        }
+    </script>
+
+</body>
+</html>

@@ -7,9 +7,9 @@ const myChart = new Chart(ctx, {
         datasets: [{
             label: 'Распределение листов на способы резки',
             data: [document.getElementById("X1").value, document.getElementById("X2").value,
-                document.getElementById("X3").value, document.getElementById("X4").value,
-                document.getElementById("X5").value, document.getElementById("X6").value],
-            
+            document.getElementById("X3").value, document.getElementById("X4").value,
+            document.getElementById("X5").value, document.getElementById("X6").value],
+
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

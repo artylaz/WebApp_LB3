@@ -6,64 +6,64 @@
     <div class="row">
 
         <div class="col-7">
-            <table class="table table-bordered mt-5">
+            <form asp-action="Report" asp-controller="Home" method="get">
+                <table class="table table-bordered mt-5">
 
-                <tr>
-                    <th scope="col" colspan="6">
-                        Количество полос проката, которое нужно разрезать соответствующим способом для изготовления заданного количества изделий, шт
-                    </th>
-                </tr>
+                    <tr>
+                        <th scope="col" colspan="6">
+                            Количество полос проката, которое нужно разрезать соответствующим способом для изготовления заданного количества изделий, шт
+                        </th>
+                    </tr>
 
-                <tr>
-                    <th scope="col">X1</th>
-                    <th scope="col">X2</th>
-                    <th scope="col">X3</th>
-                    <th scope="col">X4</th>
-                    <th scope="col">X5</th>
-                    <th scope="col">X6</th>
-                </tr>
-
-
-                <tr>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X1" disabled>
-                    </td>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X2" disabled>
-                    </td>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X3" disabled>
-                    </td>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X4" disabled>
-                    </td>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X5" disabled>
-                    </td>
-                    <td>
-                        <input type="text" class="table-input-text" asp-for="X6" disabled>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="6">
-                        <table class="table table-bordered mb-0">
-                            <th>Величина суммарных отходов от резки металла (целевая функция), см2:</th>
-                            <td>
-                                <input type="text" class="table-input-text" asp-for="Cel" disabled>
-                            </td>
-                        </table>
-                    </td>
-                </tr>
-
-            </table>
+                    <tr>
+                        <th scope="col">X1</th>
+                        <th scope="col">X2</th>
+                        <th scope="col">X3</th>
+                        <th scope="col">X4</th>
+                        <th scope="col">X5</th>
+                        <th scope="col">X6</th>
+                    </tr>
 
 
+                    <tr>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X1" readonly>
+                        </td>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X2" readonly>
+                        </td>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X3" readonly>
+                        </td>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X4" readonly>
+                        </td>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X5" readonly>
+                        </td>
+                        <td>
+                            <input type="text" class="table-input-text" asp-for="X6" readonly>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="6">
+                            <table class="table table-bordered mb-0">
+                                <th>Величина суммарных отходов от резки металла (целевая функция), см2:</th>
+                                <td>
+                                    <input type="text" class="table-input-text" asp-for="Cel" readonly>
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
 
 
-            <input class="btn btn-success" type="submit" value="Отчёт" />
-            <button class="btn btn-success" onclick="generatePDF()">Сохранить в PDF</button>
-            <button class="btn btn-success" onclick="Export2Word('exportContent');">Сохранить в Word</button>
+                <a class="btn btn-success" href="@Url.Action("Report","Home",Model.dataViewModel)">Отчёт</a>
+
+
+            </form>
         </div>
 
         <div class="col-5">
@@ -73,17 +73,3 @@
 
     </div>
 </div>
-
-
-
-
-<script>
-    function generatePDF() {
-        const element = document.getElementById('invoice');
-        html2pdf()
-            .from(element)
-            .save();
-    }
-
-</script>
-

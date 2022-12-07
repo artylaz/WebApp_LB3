@@ -2,6 +2,7 @@
 {
     public class DataViewModel
     {
+        public bool IsRes { get; set; } = true;
         public double Zag_F { get; set; }
         public int Zag_R { get; set; }
 
